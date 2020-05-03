@@ -1,11 +1,13 @@
-import { SignInPage } from './signin.po';
+import { SignUpPage } from './pageObjects/signup.po';
+import { SignInPage } from './pageObjects/signin.po';
 
 describe('O Signin (login) da home', () => {
 
-    let signInPage: SignInPage;
+    let signInPage: SignInPage, signUpPage: SignUpPage;
 
     beforeEach(() => {
         signInPage = new SignInPage;
+        signUpPage = new SignUpPage;
     });
 
     it('Deve ir para a home', () => {
