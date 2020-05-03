@@ -2,12 +2,14 @@ import { SignInPage } from './signin.po';
 
 describe('O Signin (login) da home', () => {
 
-    beforeEach(() => {
+    let signInPage: SignInPage;
 
+    beforeEach(() => {
+        signInPage = new SignInPage;
     });
 
-    it('', () => {
-
+    it('Deve ir para a home', () => {
+        signInPage.acessarHome();
     });
 
 });
