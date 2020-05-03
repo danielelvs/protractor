@@ -6,4 +6,8 @@ export class SignInPage {
         return browser.get(''); // Com o get() é possível informar a rota que desejar para realizar os testes.
     }
 
+    verificarUrl() {
+        return browser.getCurrentUrl()
+    }
+
 }
