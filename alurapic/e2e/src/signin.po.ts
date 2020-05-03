@@ -10,11 +10,19 @@ export class SignInPage {
         return browser.getCurrentUrl()
     }
 
-    validarLogin() {
+    pegarInputUserName() {
         // ELEMENT pega os elementos do DOM. 
         // BY busca pelo o que queremos buscar o elemento
         // SendKeys envia algo para o campo
-        element(by.css('input[formControlName="userName"]')).sendKeys(`flavio`);
+        return element(by.css('input[formControlName="userName"]')).sendKeys(`flavio`);
+    }
+
+    pegarInputPassword() {
+        return element(by.css('input[formControlName="password"]')).sendKeys('123');
+    }
+
+    pegarBotaoLogin() {
+        return element(by.buttonText('login')); // case sensitive
     }
 
 }
