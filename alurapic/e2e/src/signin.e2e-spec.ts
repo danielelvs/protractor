@@ -17,9 +17,9 @@ describe('O Signin (login) da home', () => {
     });
 
     it('Deve fazer login', () => {
-        expect(signInPage.pegarInputUserName());
-        expect(signInPage.pegarInputPassword());
+        expect(signInPage.pegarInput('userName', 'flavio'));
+        expect(signInPage.pegarInput('password', '123'));
         expect(signInPage.pegarBotaoLogin().click());
-    })
+    });
 
 });
