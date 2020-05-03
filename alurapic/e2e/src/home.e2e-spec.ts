@@ -1,18 +1,49 @@
 import { SignUpPage } from './pageObjects/signup.po';
 import { SignInPage } from './pageObjects/signin.po';
 
-describe('O Signin (login) da home', () => {
+describe('A tela home', () => {
 
-    let signInPage: SignInPage, signUpPage: SignUpPage;
+    let signInPage: SignInPage;
+    let signUpPage: SignUpPage;
+    let informacoesUsuario = [
+        {
+            campo: 'email',
+            valor: 'daniele@leite.com'
+        },
+        {
+            campo: 'fullName',
+            valor: 'Daniele Leite'
+        },
+        {
+            campo: 'userName',
+            valor: 'daniele'
+        },
+        {
+            campo: 'password',
+            valor: '1234567890'
+        }
+    ];
 
     beforeEach(() => {
         signInPage = new SignInPage;
         signUpPage = new SignUpPage;
     });
 
-    it('Deve ir para a home', () => {
-        signInPage.acessarHome();
+    it('Deve navegar para o Signup', () => {
+        signUpPage.navegarParaSignup();
     });
+
+    it('Deve cadastrar usuario', () => {
+        informacoesUsuario.forEach(usuario => {
+            signUpPage.registrarUsuario(usuario.campo, usuario.valor);
+        });
+        expect(signUpPage.pegarBotaoRegister().click());
+    });
+
+    // nao mais necessario pois apos cadastro, ele deve ir pra home
+    // it('Deve ir para a home', () => {
+    //     signInPage.acessarHome();
+    // });
 
     it('Deve verificar a url', () => {
         expect(signInPage.verificarUrl()).toBe('http://localhost:4200/#/home');
