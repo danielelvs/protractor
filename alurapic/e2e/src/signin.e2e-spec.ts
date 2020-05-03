@@ -14,6 +14,10 @@ describe('O Signin (login) da home', () => {
 
     it('Deve verificar a url', () => {
         expect(signInPage.verificarUrl()).toBe('http://localhost:4200/#/home');
+    });
+
+    it('Deve fazer login', () => {
+        expect(signInPage.validarLogin());
     })
 
 });
