@@ -13,4 +13,8 @@ export class SignUpPage {
     pegarBotaoRegister() {
         return element(by.buttonText('Register'));
     }
+
+    // ELEMENT ALL 
+    // imagine que você deseja tratar uma lista de elementos. Com ele, você não conseguiria tratar apenas com element, pois ele retornaria apenas um elemento. 
+    // Com element.all, essa tratativa se torna fácil!
 }
