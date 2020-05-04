@@ -1,5 +1,5 @@
-import { SignUpPage } from './pageObjects/signup.po';
-import { SignInPage } from './pageObjects/signin.po';
+import { SignUpPage } from './pageObjects/home/signup.po';
+import { SignInPage } from './pageObjects/home/signin.po';
 
 describe('A tela home', () => {
 
