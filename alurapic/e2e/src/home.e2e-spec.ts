@@ -29,21 +29,25 @@ describe('A tela home', () => {
         signUpPage = new SignUpPage;
     });
 
-    it('Deve navegar para o Signup', () => {
-        signUpPage.navegarParaSignup();
-    });
+    // it('Deve navegar para o Signup', () => {
+    //     signUpPage.navegarParaSignup();
+    // });
 
-    it('Deve cadastrar usuario', () => {
-        informacoesUsuario.forEach(usuario => {
-            signUpPage.registrarUsuario(usuario.campo, usuario.valor);
-        });
-        expect(signUpPage.pegarBotaoRegister().click());
-    });
+    // it('Deve cadastrar usuario', () => {
+    //     informacoesUsuario.forEach(usuario => {
+    //         signUpPage.registrarUsuario(usuario.campo, usuario.valor);
+    //     });
+    //     expect(signUpPage.pegarBotaoRegister().click());
+    // });
 
     // nao mais necessario pois apos cadastro, ele deve ir pra home
     // it('Deve ir para a home', () => {
     //     signInPage.acessarHome();
     // });
+
+    it('Deve ir para home', () => {
+        signInPage.acessarHome();
+    });
 
     it('Deve verificar a url', () => {
         expect(signInPage.verificarUrl()).toBe('http://localhost:4200/#/home');

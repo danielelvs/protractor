@@ -6,7 +6,7 @@ export class PhotoListPage {
         return browser.get('/#/user/flavio');
     }
 
-    buscarImagem(comentario) {
+    buscarImagem(comentario: string) {
         return element(by.className('rounded')).sendKeys(comentario);
     }
 

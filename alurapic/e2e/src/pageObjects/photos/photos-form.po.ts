@@ -13,6 +13,10 @@ export class PhotoFormPage {
         return element(by.css('input[type="file"]')).sendKeys(dirImage);
     }
 
+    comentarImagem(comentario: string){
+        return element(by.formControlName('description')).sendKeys(comentario);
+    }
+
     pegarBotaoUpload() {
         return element(by.buttonText('Upload'));
     }
