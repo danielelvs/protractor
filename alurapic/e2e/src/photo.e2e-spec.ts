@@ -28,4 +28,8 @@ describe('A funcionalidade de Photos', () => {
         photoListPage.pegarImage();
     });
 
+
+    // Agora sua vez!!!
+    // Agora que finalizamos os testes de login, cadastro de usuário, cadastro e busca de imagem, crie seu método referente à tela de detalhes de imagem. Nela, você deverá comentar e excluir uma imagem!
+
 });
